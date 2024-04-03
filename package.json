@@ -1,8 +1,12 @@
 {
   "name": "microfrontend",
   "private": true,
-  "dependencies": {},
+  "scripts": {
+    "ci": "pnpm i --frozen-lockfile",
+    "server": "http-server bucket -p 8000 --cors -c-1"
+  },
   "devDependencies": {
+    "http-server": "^14.1.1",
     "lerna": "^8.1.2"
   }
 }

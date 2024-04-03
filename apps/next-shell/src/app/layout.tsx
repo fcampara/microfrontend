@@ -11,12 +11,32 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  dynamic
 }: Readonly<{
   children: React.ReactNode;
+  dynamic: React.ReactNode
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <script
+          type="importmap"
+          dangerouslySetInnerHTML={{
+            __html: `
+{
+  "imports": {
+    "react": "https://esm.sh/react",
+    "react-dom": "https://esm.sh/react-dom",
+  }
+}
+      `,
+          }}
+        />
+      </head>
+      <body className={inter.className}>
+        {children}
+        {dynamic}
+      </body>
     </html>
   );
 }
