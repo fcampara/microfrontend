@@ -1,7 +1,6 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import App from "http://localhost:8000/example@0.0.0/index.js"
 
 export default function Home() {
   return (
@@ -42,7 +41,6 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
-        <App/>
       </div>
     </main>
   );
