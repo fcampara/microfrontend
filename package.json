@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "ci": "pnpm i --frozen-lockfile",
-    "server": "http-server bucket -p 8000 --cors -c-1"
+    "server": "http-server bucket -p 8000 --cors -c-1",
+    "dev:next": "lerna run dev --scope=@microfrontend/next-shell",
+    "dev:remix": "lerna run dev --scope=@microfrontend/remix-shell"
   },
   "devDependencies": {
     "http-server": "^14.1.1",

@@ -9,7 +9,7 @@ const __dirname = dirname(__filename);
 const bucketPath = join(__dirname, "..", "..", "..", "bucket", `${name}@${pkg.version}`, "index.js")
 
 await esbuild.build({
-  entryPoints: ['src/App.tsx'],
+  entryPoints: ['src/entry.tsx'],
   external: ["react", "react-dom"],
   bundle: true,
   minify: true,
